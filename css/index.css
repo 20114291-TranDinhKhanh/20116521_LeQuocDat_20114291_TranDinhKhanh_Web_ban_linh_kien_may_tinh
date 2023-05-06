@@ -4,6 +4,14 @@
 
 /* Padding below the footer and lighter body text */
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,17 +166,17 @@ a {
 
 /* item */
 
-.keyborad-detail {
+.keyboard-detail {
     overflow: hidden;
     width: 100%;
 }
 
-.keyborad-detail__container {
+.keyboard-detail__container {
     position: relative;
     width: 100%;
 }
 
-.keyborad-detail__img {
+.keyboard-detail__img {
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -179,10 +187,10 @@ a {
     filter: brightness(0.5);
 }
 
-.keyborad-detail__des {
+.keyboard-detail__des {
     position: flex;
     gap: 1rem;
-    padding: 1rem;
+    padding: 2rem 3rem;
     border-radius: 1rem;
     position: relative;
     z-index: 10;
