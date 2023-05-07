@@ -68,7 +68,6 @@
             var un = document.getElementById("username").value;
             var h = document.getElementById("firstName").value;
             var t = document.getElementById("lastName").value;
-            var ns = document.getElementById("birthday").value;
             var dt = document.getElementById("phone").value;
             var dc = document.getElementById("address").value;
 
@@ -96,31 +95,32 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid bg-dark text-white">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <div class="text-center">
+                    <br>
                     <h1 class="h3 font-weight-normal">ĐĂNG KÍ TÀI KHOẢN</h1>
                 </div>
                 <form class="needs-validation" novalidate>
                     <div class="form-group">
                         <label for="username">Tên đăng nhập</label>
-                        <input type="text" class="form-control" id="username" placeholder="Tên đăng nhập" required>
+                        <input type="text" class="form-control" id="username" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Vui lòng nhập tên đăng nhập!
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="pwd">Mật khẩu</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu" value="" required>
+                        <input type="password" class="form-control" id="pwd" value="" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Bạn chưa nhập mật khẩu!
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="checkpwd">Nhập lại mật khẩu</label>
-                        <input type="password" class="form-control" id="checkpwd" placeholder="Nhập lại mật khẩu" value="" required onblur="checkmatkhau()">
+                        <input type="password" class="form-control" id="checkpwd" value="" required onblur="checkmatkhau()">
                         <div class="invalid-feedback" style="width: 100%;">
                             Bạn chưa nhập tên đăng nhập!
                         </div>
@@ -134,7 +134,7 @@
                         <div class="row">
                             <div class="col-md-6 mt-3">
                                 <label for="firstName">Họ</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Họ" value="" required onblur="kiemtraho()">
+                                <input type="text" class="form-control" id="firstName" value="" required onblur="kiemtraho()">
                                 <div class="invalid-feedback">
                                     Bạn chưa nhập họ!!!
                                 </div>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="lastName">Tên</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Tên" value="" required onblur="kiemtraten()">
+                                <input type="text" class="form-control" id="lastName" value="" required onblur="kiemtraten()">
                                 <div class="invalid-feedback">
                                     Bạn chưa nhập tên!!!
                                 </div>
@@ -151,34 +151,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="birthday">Ngày sinh</label>
-                        <input type="date" class="form-control" id="birthday" required>
-                        <div class="invalid-feedback">
-                            Ngày sinh không được để trống!!!
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Giới tính</label>
-                        <div class="custom-control custom-radio">
-                            <input id="Nam" name="gender" type="radio" class="custom-control-input" value="Nam" checked required>
-                            <label class="custom-control-label" for="Nam">Nam</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input id="Nu" name="gender" type="radio" class="custom-control-input" value="Nữ" required>
-                            <label class="custom-control-label" for="Nu">Nữ</label>
-                        </div>
-
-                    </div>
-                    <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                        <input type="email" class="form-control" id="email" placeholder="email@gmail.com" required>
                         <div class="invalid-feedback">
                             Email không được để trống!!!
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="phone">Điện thoại</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="0123456789" required onblur="checktel()">
+                        <input type="tel" class="form-control" id="phone" required onblur="checktel()">
                         <div class="invalid-feedback">
                             Điện thoại không được để trống!!!
                         </div>
@@ -186,7 +167,7 @@
                     </div>
                     <div class="form-group">
                         <label for="address">Địa chỉ</label>
-                        <input type="text" class="form-control" id="address" placeholder="Bac Ninh..." required>
+                        <input type="text" class="form-control" id="address" required>
                         <div class="invalid-feedback">
                             Địa chỉ không được bỏ trống!!!
                         </div>
@@ -201,21 +182,8 @@
                 </form>
                 </div>
                 <a href="../index.html" style="text-decoration: none;"><button class="btn btn-secondary btn-lg btn-block mt-3" type="submit">Quay về</button></a>
-                <div class="col-md-3"></div>
                 <br>
-                <table class="table table-hover table-bordered" id="tbinfo">
-                    <tr>
-                        <th>Tài khoản</th>
-                        <th>Họ tên</th>
-                        <th>Ngày sinh</th>
-                        <th>Giới tính</th>
-                        <th>Sđt</th>
-                        <th>Địa chỉ</th>
-                    </tr>
-                </table>
             </div>
-
-        </div>
 
 </body>
 
