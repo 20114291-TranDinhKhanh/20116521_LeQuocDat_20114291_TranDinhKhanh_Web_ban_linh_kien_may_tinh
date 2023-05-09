@@ -22,12 +22,12 @@ let getUser = async () => {
                                   </li>
                                     `
                                     : `<li class="text-nowrap">
-                                    <a class="nav-link nav__header" href="./html/dangnhap.html">
+                                    <a class="nav-link nav__header" href="https://20114291-trandinhkhanh.github.io/20116529_LeQuocDat_20114291_TranDinhKhanh_Web_ban_linh_kien_may_tinh/html/dangnhap.html">
                                       Đăng nhập
                                     </a>
                                   </li>
                                   <li class="nav-item text-nowrap">
-                                    <a class="nav-link nav__header" href="./html/dangki.html">
+                                    <a class="nav-link nav__header" href="https://20114291-trandinhkhanh.github.io/20116529_LeQuocDat_20114291_TranDinhKhanh_Web_ban_linh_kien_may_tinh/html/dangki.html">
                                       Đăng kí
                                     </a>
                                   </li>`
