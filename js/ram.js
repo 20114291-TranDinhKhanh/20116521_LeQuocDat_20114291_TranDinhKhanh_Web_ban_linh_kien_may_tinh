@@ -1,18 +1,18 @@
 const data = [
   {
-    title: "Core i7 10700",
-    price: 20000,
-    image: "cpu1.png",
+    title: "G.SKILL Trident Z RGB 16GB",
+    price: 4000000,
+    image: "ram1.webp",
   },
   {
-    title: "Core i5 10500T",
-    price: 10000,
-    image: "cpu2.png",
+    title: "ADATA XPG LANCER RGB 64GB",
+    price: 4500000,
+    image: "ram2.webp",
   },
   {
-    title: "RYZEN 3 Pro 4350G",
-    price: 15000,
-    image: "cpu3.png",
+    title: "Corsair Vengeance RGB RS 32GB",
+    price: 5000000,
+    image: "ram3.webp",
   },
 ];
 

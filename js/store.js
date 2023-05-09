@@ -6,7 +6,7 @@ const getListItemLocalStorage = () => {
     .map(
       (item) => `
             <div class="d-flex align-items-center shadow">
-                <img src="../img/cpu1.png" alt="item" class="item__img">
+                <img src="../img/${item.image}" alt="item" class="item__img">
                 <div class="flex-grow-1">
                     <h4>${item?.title}</h4>
                     <h4 class="text-secondary">${item.price}</h4>
@@ -25,7 +25,8 @@ const getListItemLocalStorage = () => {
             <h2 class="text-center text-capitalize my-3">gio hang cua ban</h2>
             <div class="row">
                 <div class='col-9'>${html}</div>
-                <div class="col-3 d-flex align-items-center justify-content-end position-sticky ">
+                <div class="col-3 d-flex flex-column align-items-center position-sticky ">
+                    <div class="my-4">Tổng: ${listItems.reduce((total, value) => total + value.price, 0)}</div>
                     <a href="../html/thanhtoan.html">
                         <button class="btn btn-primary text-right">Thanh toan</button>
                     </a>
@@ -42,12 +43,12 @@ const getListItemLocalStorage = () => {
 
 getListItemLocalStorage();
 
-const btnDeletes = document.querySelectorAll(".btn--delete");
-btnDeletes.forEach((btnDelete, index) => {
-  btnDelete.addEventListener("click", () => {
+store.addEventListener("click", (event) => {
+  if (event.target.classList.contains("btn--delete")) {
     const listItems = JSON.parse(localStorage.getItem("items")) || [];
+    const index = Array.from(event.target.parentNode.parentNode.children).indexOf(event.target.parentNode);
     listItems.splice(index, 1);
     localStorage.setItem("items", JSON.stringify(listItems));
     getListItemLocalStorage();
-  });
+  }
 });

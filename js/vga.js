@@ -1,23 +1,38 @@
 const data = [
   {
-    title: "Core i7 10700",
-    price: 20000,
-    image: "cpu1.png",
+    title: "Palit 3060ti",
+    price: 10000000,
+    image: "vga1.jpg",
   },
   {
-    title: "Core i5 10500T",
-    price: 10000,
-    image: "cpu2.png",
+    title: "MSI 4070ti",
+    price: 21000000,
+    image: "vga2.jpg",
   },
   {
-    title: "RYZEN 3 Pro 4350G",
-    price: 15000,
-    image: "cpu3.png",
+    title: "AERO 4070ti",
+    price: 23000000,
+    image: "vga3.jpg",
+  },
+  {
+    title: "Aorus 4070ti",
+    price: 21000000,
+    image: "vga4.jpg",
+  },
+  {
+    title: "Igame 4070ti",
+    price: 20000000,
+    image: "vga5.jpg",
+  },
+  {
+    title: "Asus 4070",
+    price: 18000000,
+    image: "vga6.jpg",
   },
 ];
 
-const container = document.querySelector("#container");
-container.innerHTML = data
+const vga__container = document.querySelector("#vga__container");
+vga__container.innerHTML = data
   .map((item) => {
     return `
       <div class="col-md-4">
@@ -44,14 +59,14 @@ container.innerHTML = data
   })
   .join("");
 
-const listBtnAdd = document.querySelectorAll(".btn--add");
+const vga__listBtnAdd = document.querySelectorAll(".btn--add");
 
 let saveLocalStorage = (item) => {
   const items = JSON.parse(localStorage.getItem("items")) || [];
   localStorage.setItem("items", JSON.stringify([...items, item]));
 };
 
-listBtnAdd.forEach((btn) => {
+vga__listBtnAdd.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     const item = JSON.parse(event.currentTarget.dataset.item);
     console.log(item);
