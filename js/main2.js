@@ -11,7 +11,7 @@ let getUser = async () => {
             <div class="container py-2">
                 <div class="row">
                     <div class="col-8">
-                      <a href="/"><img src="../img/icon.png" style="width:100px; height:65px;" /></a>
+                      <a href="/"><img src="/img/icon.png" style="width:100px; height:65px;" /></a>
                     </div>
                     <div class="col-4 ">
                         <nav class="navbar-expand d-flex justify-content-end">
@@ -29,7 +29,7 @@ let getUser = async () => {
                                     </a>
                                   </li>
                                   <li class="nav-item text-nowrap">
-                                    <a class="nav-link nav__header" href="/./html/dangki.html">
+                                    <a class="nav-link nav__header" href="../html/dangki.html">
                                       Đăng kí
                                     </a>
                                   </li>`
