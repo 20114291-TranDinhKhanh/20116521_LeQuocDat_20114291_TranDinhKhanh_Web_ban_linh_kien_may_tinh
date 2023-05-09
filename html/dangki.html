@@ -1,194 +1,96 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Dang ki</title>
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/index.css" rel="stylesheet">
-    <script src="../js/jquery-3.5.1.min.js"></script>
-    <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/thanhtoan.js"></script>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/index.css" rel="stylesheet" />
     <style>
-        #er1,
-        #er2,
-        #er3,
-        #er4 {
-            color: red;
-            font-style: italic;
-        }
+      #er1,
+      #er2,
+      #er3,
+      #er4 {
+        color: red;
+        font-style: italic;
+      }
     </style>
-    <script>
-        function checkmatkhau() {
-            var regpwd = document.getElementById("pwd").value;
-            var check = document.getElementById("checkpwd").value;
-            if (regpwd != check) {
-                document.getElementById("er3").innerHTML = "(*)Mật khẩu không đúng!!";
-            } else {
-                document.getElementById("er3").innerHTML = "";
-            }
-        }
+  </head>
 
-        function kiemtraho() {
-            var regname = /^[A-Z]+[A-Za-z]*(\s[A-Z]+[A-Za-z]*)*$/;
-            var ten = document.getElementById("firstName").value;
-            if (regname.test(ten) == false) {
-                document.getElementById("er1").innerHTML = "(*)Phải bắt đầu bằng ký tự in hoa!!";
-            } else {
-                document.getElementById("er1").innerHTML = "";
-            }
-        }
+  <body>
+    <div class="container-fluid h-100 bg-light text-black-50">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <br />
+            <h1 class="h3 font-weight-normal">ĐĂNG KÍ TÀI KHOẢN</h1>
+          </div>
 
-        function kiemtraten() {
-            var regname = /^[A-Z]+[A-Za-z]*(\s[A-Z]+[A-Za-z]*)*$/;
-
-            var ten = document.getElementById("lastName").value;
-
-            if (regname.test(ten) == false) {
-                document.getElementById("er2").innerHTML = "(*)Phải bắt đầu bằng ký tự in hoa!!";
-            } else {
-                document.getElementById("er2").innerHTML = "";
-            }
-        }
-
-        function checktel() {
-            var regtel = /^[0-9]/;
-            var tel = document.getElementById("phone").value;
-            if (regtel.test(tel) == false) {
-                document.getElementById("er4").innerHTML = "(*)Số điện thoại không đúng!!";
-            } else {
-                document.getElementById("er4").innerHTML = "";
-            }
-        }
-        var count = 1;
-
-        function dangki() {
-            var un = document.getElementById("username").value;
-            var h = document.getElementById("firstName").value;
-            var t = document.getElementById("lastName").value;
-            var dt = document.getElementById("phone").value;
-            var dc = document.getElementById("address").value;
-
-            var gt = document.querySelector('input[name="gender"]:checked').value;
-            var ht = new String(h + " " + t);
-            var tb = document.getElementById("tbinfo");
-            var row = tb.insertRow(count);
-            var c0 = row.insertCell(0);
-            var c1 = row.insertCell(1);
-            var c2 = row.insertCell(2);
-            var c3 = row.insertCell(3);
-            var c4 = row.insertCell(4);
-            var c5 = row.insertCell(5);
-
-            c0.innerHTML = un;
-            c1.innerHTML = ht;
-            c2.innerHTML = ns;
-            c3.innerHTML = gt;
-            c4.innerHTML = dt;
-            c5.innerHTML = dc;
-
-            count++;
-        }
-    </script>
-</head>
-
-<body>
-    <div class="container-fluid bg-dark text-white">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="text-center">
-                    <br>
-                    <h1 class="h3 font-weight-normal">ĐĂNG KÍ TÀI KHOẢN</h1>
-                </div>
-                <form class="needs-validation" novalidate>
-                    <div class="form-group">
-                        <label for="username">Tên đăng nhập</label>
-                        <input type="text" class="form-control" id="username" required>
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Vui lòng nhập tên đăng nhập!
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Mật khẩu</label>
-                        <input type="password" class="form-control" id="pwd" value="" required>
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Bạn chưa nhập mật khẩu!
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="checkpwd">Nhập lại mật khẩu</label>
-                        <input type="password" class="form-control" id="checkpwd" value="" required onblur="checkmatkhau()">
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Bạn chưa nhập tên đăng nhập!
-                        </div>
-                        <span id="er3"></span>
-                    </div>
-                    <hr>
-                    <div class="text-center">
-                        <h1 class="h3 font-weight-normal">THÔNG TIN CÁ NHÂN</h1>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-6 mt-3">
-                                <label for="firstName">Họ</label>
-                                <input type="text" class="form-control" id="firstName" value="" required onblur="kiemtraho()">
-                                <div class="invalid-feedback">
-                                    Bạn chưa nhập họ!!!
-                                </div>
-                                <span id="er1"></span>
-                            </div>
-                            <div class="col-md-6 mt-3">
-                                <label for="lastName">Tên</label>
-                                <input type="text" class="form-control" id="lastName" value="" required onblur="kiemtraten()">
-                                <div class="invalid-feedback">
-                                    Bạn chưa nhập tên!!!
-                                </div>
-                                <span id="er2"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="email@gmail.com" required>
-                        <div class="invalid-feedback">
-                            Email không được để trống!!!
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Điện thoại</label>
-                        <input type="tel" class="form-control" id="phone" required onblur="checktel()">
-                        <div class="invalid-feedback">
-                            Điện thoại không được để trống!!!
-                        </div>
-                        <span id="er4"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Địa chỉ</label>
-                        <input type="text" class="form-control" id="address" required>
-                        <div class="invalid-feedback">
-                            Địa chỉ không được bỏ trống!!!
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12"></div>
-                        <div class="col-md-12 mt-3">
-                            <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnDK" onclick="dangki()">Đăng kí</button>
-                            <br>
-                        </div>
-                        <div class="col-md-4"></div>
-                </form>
-                </div>
-                <a href="../index.html" style="text-decoration: none;"><button class="btn btn-secondary btn-lg btn-block mt-3" type="submit">Quay về</button></a>
-                <br>
+          <form class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="dangki_username">Tên đăng nhập</label>
+              <input type="text" class="form-control" id="dangki_username" name="dangki_username" required />
+              <span id="er_dangki_username"></span>
             </div>
 
-</body>
+            <div class="form-group">
+              <label for="dangki_email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="dangki_email"
+                name="dangki_email"
+                placeholder="test@gmail.com"
+                required
+              />
+              <span id="er_dangki_email"></span>
+            </div>
 
-<script src="../js/jquery-3.5.1.min.js"></script>
-<script src="../js/bootstrap.bundle.js"></script>
-<script src="../js/main.js"></script>
+            <div class="form-group">
+              <label for="pwd">Mật khẩu</label>
+              <input type="password" class="form-control" id="dangki_pwd" value="" required />
+              <span id="er_dangki_pwd"></span>
+            </div>
 
+            <div class="form-group">
+              <label for="checkpwd">Nhập lại mật khẩu</label>
+              <input type="password" class="form-control" id="dangki_checkpwd" value="" required />
+              <span id="er_dangki_checkpwd"></span>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12"></div>
+              <div class="col-md-12 mt-3">
+                <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnDK">Đăng kí</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="w-full mb-5">
+            <a href="/" class="w-full" style="text-decoration: none">
+              <button class="btn btn-secondary btn-lg btn-block mt-3">Quay về</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <table id="dangki_table" class="table table-hover table-primary table-striped">
+        <thead>
+          <tr>
+            <th scope="col">stt</th>
+            <th scope="col">ten</th>
+            <th scope="col">email</th>
+            <th scope="col">mat khau</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+
+  <script src="../js/jquery-3.5.1.min.js"></script>
+  <script src="../js/bootstrap.bundle.js"></script>
+  <script type="module" src="../js/dangki.js"></script>
 </html>

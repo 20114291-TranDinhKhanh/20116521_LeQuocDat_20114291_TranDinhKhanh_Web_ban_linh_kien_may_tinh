@@ -1,54 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Dang nhap</title>
+    <title>Dang nhập</title>
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <link href="../css/index.css" rel="stylesheet" />
-    <script src="../js/jquery-3.5.1.min.js"></script>
-    <script src="../js/bootstrap.bundle.js"></script>
-    <link href="../css/dangnhap.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
-    <div class="bg-dark w-100 text-white">
-        <div class="container col-2">
-            <div class="row">
-                <div class="w-100">
-                    <br>
-                    <h1 class="h3 font-weight-normal text-center">ĐĂNG NHẬP TÀI KHOẢN</h1>
-                </div>
-                <form class="form-signin">
-                    <div class="form-label-group">
-                        <input type="text" id="username" class="form-control" placeholder="Tên đăng nhập" required autofocus />
-                        <label for="username">Tên đăng nhập</label>
-                    </div>
+  <body>
+    <div class="container-fluid h-100 bg-light text-black-50">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <h1 class="h3 font-weight-normal">ĐĂNG NHẬP TÀI KHOẢN</h1>
+          </div>
 
-                    <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required />
-                        <label for="inputPassword">Mật khẩu</label>
-                    </div>
-                    <div class="checkbox mb-3">
-                        <label> <input type="checkbox" value="remember-me" /> Nhớ tài khoản </label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Đăng nhập</button>
-                    <br />
-                    <div class="text-center mb-4">
-                        <h6>Bạn chưa có tài khoản? <a class="login" href="./dangki.html">Đăng kí</a></h6>
-                    </div>
-                </form>
+          <form class="needs-validation" novalidate>
+
+            <div class="form-group">
+              <label for="dangnhap_email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="dangnhap_email"
+                name="dangnhap_email"
+                placeholder="test@gmail.com"
+                required
+              />
+              <span id="er_dangnhap_email"></span>
             </div>
-            <a href="../index.html" style="text-decoration: none"><button class="btn btn-secondary btn-lg btn-block mt-3" type="submit">Quay về</button></a>
-            <br>
+
+            <div class="form-group">
+              <label for="pwd">Mật khẩu</label>
+              <input type="password" class="form-control" id="dangnhap_pwd" value="" required />
+              <span id="er_dangnhap_pwd"></span>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12"></div>
+              <div class="col-md-12 mt-3">
+                <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnDN">Đăng Nhập</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="w-full mb-5">
+            <a href="/" class="w-full" style="text-decoration: none">
+              <button class="btn btn-secondary btn-lg btn-block mt-3" id="dangnhap_back">Quay về</button>
+            </a>
+          </div>
         </div>
+      </div>
 
-    </div>
-</body>
+      
+  </body>
 
-<script src="../js/jquery-3.5.1.min.js"></script>
-<script src="../js/bootstrap.bundle.js"></script>
-<script src="../js/main.js"></script>
-
+  <script src="../js/jquery-3.5.1.min.js"></script>
+  <script src="../js/bootstrap.bundle.js"></script>
+  <script type="module" src="../js/dangnhap.js"></script>
 </html>
