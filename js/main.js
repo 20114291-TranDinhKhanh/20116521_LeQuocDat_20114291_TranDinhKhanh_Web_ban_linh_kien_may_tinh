@@ -10,10 +10,7 @@ let getUser = async () => {
     <header class="header bg-dark text-white ">
             <div class="container py-2">
                 <div class="row">
-                    <div class="col-8 flex">
-                      <a href="/"><img src="./img/icon.png" style="width:100px; height:65px;" /></a>
-                      <span>STUDIO</span>
-                    </div>
+                   
                     <div class="col-4 ">
                         <nav class="navbar-expand d-flex justify-content-end">
                             <ul class="navbar-nav">
