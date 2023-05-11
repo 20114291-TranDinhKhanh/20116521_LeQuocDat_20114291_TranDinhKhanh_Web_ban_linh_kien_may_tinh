@@ -1,9 +1,9 @@
 const btn_add_item3 = document.getElementById("btn_add_item3");
 
 const data = {
-  title: "RE65",
-  price: "4488000",
-  image: "re65.png",
+  title: "Pbtfans BOW",
+  price: 17880000,
+  image: "pbtfans.png",
 };
 
 const saveItemToLocalStorage = async (item) => {
