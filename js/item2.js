@@ -1,4 +1,4 @@
-const btn_add_item1 = document.getElementById("btn_add_item1");
+const btn_add_item2 = document.getElementById("btn_add_item2");
 
 const data = {
   title: "RE65",
@@ -11,7 +11,7 @@ const saveItemToLocalStorage = async (item) => {
   localStorage.setItem("items", JSON.stringify([...items, item]));
 };
 
-btn_add_item1.addEventListener("click", () => {
+btn_add_item2.addEventListener("click", () => {
   saveItemToLocalStorage(data);
   console.log(data);
   alert("Thêm vào giỏ hàng thành công !");

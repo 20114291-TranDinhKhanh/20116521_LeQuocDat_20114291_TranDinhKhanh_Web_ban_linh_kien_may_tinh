@@ -6,7 +6,9 @@ const getListItemLocalStorage = () => {
     .map(
       (item) => `
             <div class="d-flex align-items-center shadow">
-                <img src="../img/${item.image}" alt="item" class="item__img">
+                <div class='overflow-hidden'>
+                  <img src="../img/${item.image}" alt="item" class="item__img">
+                </div>
                 <div class="flex-grow-1">
                     <h4>${item?.title}</h4>
                     <h4 class="text-secondary">${item.price}</h4>
