@@ -35,7 +35,7 @@ const getListItemLocalStorage = () => {
          </div>
     `
         : `
-        <a href="https://20114291-trandinhkhanh.github.io/20116529_LeQuocDat_20114291_TranDinhKhanh_Web_ban_linh_kien_may_tinh/"> Giỏ hàng bạn trống.Click vào đây và tiếp tục mua sắm</a>
+        <a href="https://20114291-trandinhkhanh.github.io/20116521_LeQuocDat_20114291_TranDinhKhanh_Web_ban_linh_kien_may_tinh/"> Giỏ hàng bạn trống.Click vào đây và tiếp tục mua sắm</a>
     `
     }
   `;
